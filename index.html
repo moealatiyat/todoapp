@@ -4,12 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Todo App</h1>
+    <div class="header">
+        <h1>Todo App</h1>
+        <div class="theme-switcher">
+            <button id="theme-toggle">🌙</button>
+            <div class="color-options">
+                <button class="color-btn" data-color="default"></button>
+                <button class="color-btn" data-color="blue"></button>
+                <button class="color-btn" data-color="green"></button>
+                <button class="color-btn" data-color="purple"></button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pomodoro-timer">
+        <div class="timer-display">25:00</div>
+        <div class="timer-controls">
+            <button id="start-timer">Start</button>
+            <button id="pause-timer">Pause</button>
+            <button id="reset-timer">Reset</button>
+        </div>
+        <div class="timer-modes">
+            <button class="mode-btn active" data-time="25">Pomodoro</button>
+            <button class="mode-btn" data-time="5">Short Break</button>
+            <button class="mode-btn" data-time="15">Long Break</button>
+        </div>
+    </div>
+
+    <div class="notes-section">
+        <div class="notes-header">
+            <h2>Study Notes</h2>
+            <button id="toggle-notes" class="toggle-notes-btn">
+                <svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path d="M480-345 240-585l56-58 184 184 184-184 56 58-240 240Z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="notes-content">
+            <textarea id="notes-input" placeholder="Write your thoughts, ideas, or study notes here..."></textarea>
+            <div class="notes-controls">
+                <button id="save-notes">Save Notes</button>
+                <span id="save-status"></span>
+            </div>
+        </div>
+    </div>
+
     <div class="wrapper">
         <form>
             <input id="todo-input" type="text" 
