@@ -1,4 +1,4 @@
-const todoForm= document.querySelector('form');
+const todoForm = document.querySelector('form');
 const todoInput = document.getElementById('todo-input');
 const todoListUL = document.getElementById('todo-list');
 
@@ -12,17 +12,16 @@ todoForm.addEventListener('submit', function(e){
 
 function addTodo(){
     const todoText = todoInput.value.trim();
-    if(todoText.length>0){
+    if(todoText.length > 0){
         const todoObject = {
             text: todoText,
             completed: false
         }
-        allTodos.push(todoObjecct);
+        allTodos.push(todoObject);
         updateTodoList();
         saveTodos();
         todoInput.value = "";
-    }
-
+    }  
 }
 function updateTodoList(){
     todoListUL.innerHTML = "";
