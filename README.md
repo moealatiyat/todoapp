@@ -28,6 +28,10 @@ This is a simple and intuitive **To-Do App** built using **HTML, CSS, and JavaSc
    ```
 2. Open `index.html` in your browser.
 
+or
+
+ https://todoappcenter.netlify.app/
+
 ## 🤝 Contributing
 Feel free to fork the project and submit a pull request with improvements! 🚀
 
